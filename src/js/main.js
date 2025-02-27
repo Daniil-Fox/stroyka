@@ -1,4 +1,5 @@
 import "./_components.js";
+import { burger } from "./functions/burger.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   const productItems = document.querySelectorAll(".products-item");

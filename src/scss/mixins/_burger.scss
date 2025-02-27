@@ -47,13 +47,13 @@
   }
 
   &--active {
-    &::before {
+    .burger::before {
       top: 50%;
       transform: rotate(45deg);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
 
-    &::after {
+    .burger::after {
       top: 50%;
       transform: rotate(-45deg);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;

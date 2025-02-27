@@ -10,6 +10,7 @@ if (
 
     btn.addEventListener("click", (e) => {
       let isActive = btn.classList.toggle("active");
+      item.classList.toggle("active");
       content.style.maxHeight = isActive ? content.scrollHeight + "px" : null;
     });
   });

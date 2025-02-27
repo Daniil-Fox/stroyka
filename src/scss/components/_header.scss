@@ -1,5 +1,7 @@
 .header {
   padding: 24px 0;
+  position: relative;
+  z-index: 90;
   @include small-tablet {
     padding: 18px 0;
   }
