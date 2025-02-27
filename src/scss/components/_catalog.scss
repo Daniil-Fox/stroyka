@@ -1,0 +1,110 @@
+.catalog {
+  margin-bottom: 40px;
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    padding: 16px 14px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: #1c202d;
+    background-color: #f8faff;
+
+    transition: background-color 0.2s ease-in;
+
+    @include hover {
+      background-color: #fde047;
+    }
+  }
+}
+.main-catalog {
+  margin-bottom: 80px;
+  .catalog__title {
+    margin-bottom: 24px;
+  }
+}
+.catalog-item {
+  height: 200px;
+  padding: 14px;
+  background-color: #f8faff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  border-radius: 14px;
+  overflow: hidden;
+
+  transition: background-color 0.2s ease-in;
+  &__info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+    flex-shrink: 0;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    color: #1c202d;
+  }
+  &__img {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-height: 102px;
+      max-width: 136px;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+    border-radius: 10px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    opacity: 0;
+    transition: 0.2s ease-in;
+  }
+
+  @include hover {
+    background-color: #fde047;
+
+    .catalog-item__btn {
+      opacity: 1;
+    }
+  }
+}

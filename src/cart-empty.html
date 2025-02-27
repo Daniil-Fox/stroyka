@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <div class="container">
+          <div class="breadcrumbs">
+            <ul>
+              <li>
+                <a href="./">Главная</a>
+              </li>
+              <li>
+                <span>Каталог строительных материалов</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <section class="cart">
+          <div class="container">
+            <h1 class="cart__title title2">Корзина</h1>
+            <div>
+              <div class="cart-empty cart__empty">
+                <div class="cart-empty__icon">
+                  <img src="./img/delivery-cart.svg" alt="" />
+                </div>
+                <div class="cart-empty__col">
+                  <p class="cart-empty__title">Ваша корзина пуста</p>
+                  <p class="cart-empty__desc">
+                    <a href="#">Перейдите в каталог,</a> чтобы продолжить
+                    покупки
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>

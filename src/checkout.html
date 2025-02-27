@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <div class="container">
+          <div class="breadcrumbs">
+            <ul>
+              <li>
+                <a href="./">Главная</a>
+              </li>
+              <li>
+                <span>Контакты</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <section class="checkout">
+          <div class="container">
+            <h1 class="title2 checkout__title">Оформление заказа</h1>
+
+            <form action="#" class="form checkout-form checkout__form">
+              <div class="checkout-form__block">
+                <div class="checkout-form__label">Контактная информация</div>
+                <div class="form__grid">
+                  <label class="form__label">
+                    <input
+                      type="text"
+                      name="Фамилия"
+                      placeholder="Ваша Фамилия *"
+                      required
+                      class="form__input"
+                    />
+                  </label>
+                  <label class="form__label">
+                    <input
+                      type="text"
+                      name="Имя"
+                      placeholder="Ваше имя *"
+                      required
+                      class="form__input"
+                    />
+                  </label>
+                  <label class="form__label">
+                    <input
+                      type="email"
+                      name="Фамилия"
+                      placeholder="Email *"
+                      required
+                      class="form__input"
+                    />
+                  </label>
+                  <label class="form__label">
+                    <input
+                      type="tel"
+                      name="Телефон"
+                      placeholder="+ 7"
+                      class="form__input"
+                    />
+                  </label>
+                </div>
+              </div>
+              <div class="checkout-form__block">
+                <div class="checkout-form__label">Способ доставки</div>
+                <div class="form__grid">
+                  <label class="form__checkbox">
+                    <input
+                      type="radio"
+                      name="Способ доставки"
+                      value="Доставка продавцом"
+                      class="visually-hidden"
+                      checked
+                    />
+                    <div class="form__checkcont">
+                      <span>Доставка продавцом</span>
+                    </div>
+                  </label>
+                  <label class="form__checkbox">
+                    <input
+                      type="radio"
+                      name="Способ доставки"
+                      value="Самовывоз"
+                      class="visually-hidden"
+                    />
+                    <div class="form__checkcont">
+                      <span>Самовывоз</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="checkout-form__block">
+                <div class="checkout-form__label">Оплата заказа</div>
+                <div class="form__grid">
+                  <label class="form__checkbox">
+                    <input
+                      type="radio"
+                      name="Оплата заказа"
+                      value="Оплата картой"
+                      class="visually-hidden"
+                      checked
+                    />
+                    <div class="form__checkcont">
+                      <span>Оплата картой</span>
+                    </div>
+                  </label>
+                  <label class="form__checkbox">
+                    <input
+                      type="radio"
+                      name="Оплата заказа"
+                      value="Наличный расчет"
+                      class="visually-hidden"
+                    />
+                    <div class="form__checkcont">
+                      <span>Наличный расчет</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="checkout-form__block">
+                <div class="checkout-form__label">Комментарий к заказу</div>
+                <div class="form__grid">
+                  <textarea
+                    name="Комментарий"
+                    placeholder="Комментарий"
+                    class="form__input form__area"
+                    id=""
+                  ></textarea>
+                </div>
+              </div>
+              <div class="checkout-form__total cart-total">
+                <div class="cart-total__total">
+                  Итого
+                  <span>1596 ₽</span>
+                </div>
+                <div class="cart-total__desc">Общий вес: 9.3 кг</div>
+                <button class="cart-total__btn btn btn-reset btn--red">
+                  Оформить заказ
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>

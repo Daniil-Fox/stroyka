@@ -1,0 +1,153 @@
+<section class="contacts">
+  <div class="container">
+    <h1 class="title2 contacts__title">Контакты</h1>
+
+    <div class="contacts__container">
+      <div class="contacts__map" id="map"></div>
+      <address class="contacts__block">
+        <p class="contacts__capture">Наш адрес</p>
+        <p class="contacts__address">
+          Нижегородская область,<br />г.&nbsp;Бор, ул.&nbsp;Кольцова,&nbsp;22М
+        </p>
+      </address>
+      <address class="contacts__block">
+        <p class="contacts__capture">Время работы</p>
+        <div class="contacts__row">
+          <div class="contacts__tt">
+            <span>Понедельник - Суббота</span>
+            <p>8:00-19:00</p>
+          </div>
+          <div class="contacts__tt">
+            <span>Воскресенье </span>
+            <p>8:00-18:00</p>
+          </div>
+        </div>
+      </address>
+
+      <a href="#" class="contacts__btn btn--white btn btn-reset">
+        Построить маршрут
+      </a>
+    </div>
+
+    <div class="contacts__cta contacts-cta">
+      <div class="contacts-cta__container">
+        <div class="contacts-cta__left">
+          <p class="subtitle1 contacts-cta__title">
+            Ответим на ваш вопрос или предложение
+          </p>
+          <form action="#" class="form contacts-cta__form">
+            <div class="form__grid">
+              <label class="form__label">
+                <input
+                  type="text"
+                  placeholder="Название или артикул товара"
+                  name="Название или артикул товара"
+                  class="form__input"
+                />
+              </label>
+              <label class="form__label">
+                <input
+                  type="text"
+                  placeholder="Название или артикул товара"
+                  name="Название или артикул товара"
+                  class="form__input"
+                />
+              </label>
+              <label class="form__label">
+                <input
+                  type="tel"
+                  placeholder="Ваш телефон"
+                  name="Телефон"
+                  class="form__input"
+                />
+              </label>
+              <label class="form__label">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="Email"
+                  class="form__input"
+                />
+              </label>
+              <textarea
+                name="Вопрос или предложение"
+                placeholder="Ваш вопрос или предложение"
+                class="form__area form__input"
+              ></textarea>
+            </div>
+
+            <div class="form__row">
+              <label class="form__attach" data-file>
+                <input
+                  type="file"
+                  name="files[]"
+                  multiple
+                  class="visually-hidden"
+                />
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.9997 1.5C14.485 1.5 16.4997 3.51472 16.4997 6C16.4997 7.15298 16.0631 8.23825 15.2967 9.06265L15.1543 9.20881L8.60901 15.754L8.56916 15.7911L8.52737 15.8248C8.02546 16.2569 7.38421 16.5 6.70693 16.5C5.1656 16.5 3.9161 15.2505 3.9161 13.7092C3.9161 13.0331 4.15837 12.3936 4.58777 11.8931L4.69899 11.7709L4.7103 11.7619L10.1786 6.2841C10.4712 5.99095 10.9461 5.99053 11.2392 6.28317C11.5324 6.5758 11.5328 7.05068 11.2401 7.34383L5.77189 12.8217L5.76369 12.8279C5.54146 13.0656 5.4161 13.3766 5.4161 13.7092C5.4161 14.4221 5.99402 15 6.70693 15C6.99115 15 7.2596 14.9085 7.48035 14.7428L7.57194 14.6673L7.57252 14.6685L14.0993 8.1428L14.2182 8.01951C14.7171 7.47224 14.9997 6.75937 14.9997 6C14.9997 4.34315 13.6566 3 11.9997 3C11.2035 3 10.4587 3.31095 9.90336 3.85394L9.7873 3.97382L9.77344 3.98354L2.77947 10.9802C2.48664 11.2732 2.01177 11.2733 1.71881 10.9804C1.42585 10.6876 1.42575 10.2127 1.71857 9.91978L8.70029 2.93493L8.73525 2.90266C9.57818 2.01433 10.7485 1.5 11.9997 1.5Z"
+                    fill="#5168C0"
+                  />
+                </svg>
+                <span data-names>Прикрепить файл</span>
+              </label>
+              <button class="btn btn-reset form__btn">Отправить</button>
+            </div>
+          </form>
+        </div>
+        <div class="contacts-cta__tels">
+          <p class="contacts-cta__capture">Телефон менеджера</p>
+          <ul class="list-reset contacts-cta__list">
+            <li>
+              <a href="tel:79200752233">+7 (920) 075-22-33</a>
+            </li>
+            <li>
+              <a href="tel:+79200352233">+7 (920) 035-22-33</a>
+            </li>
+          </ul>
+          <a href="#" class="contacts-cta__btn btn btn--stroke"
+            >Заказать звонок</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script
+  src="https://api-maps.yandex.ru/2.1/?apikey=221cbec3-01c0-4b1a-8417-d7d65e719c35&lang=ru_RU"
+  type="text/javascript"
+></script>
+<script type="text/javascript">
+  ymaps.ready(init);
+  function init() {
+    var myMap = new ymaps.Map("map", {
+      center: [56.376848, 44.056882],
+      zoom: 15,
+    });
+
+    myPlacemark = new ymaps.Placemark(
+      myMap.getCenter(),
+      {},
+      {
+        iconLayout: "default#image",
+      }
+    );
+    myMap.geoObjects.add(myPlacemark);
+
+    myMap.controls.remove("geolocationControl"); // удаляем геолокацию
+    myMap.controls.remove("searchControl"); // удаляем поиск
+    myMap.controls.remove("trafficControl"); // удаляем контроль трафика
+    myMap.controls.remove("typeSelector"); // удаляем тип
+    myMap.controls.remove("fullscreenControl"); // удаляем кнопку перехода в полноэкранный режим
+    myMap.controls.remove("zoomControl"); // удаляем контрол зуммирования
+    myMap.controls.remove("rulerControl"); // удаляем контрол правил
+  }
+</script>

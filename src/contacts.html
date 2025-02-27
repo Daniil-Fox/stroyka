@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <div class="container">
+          <div class="breadcrumbs">
+            <ul>
+              <li>
+                <a href="./">Главная</a>
+              </li>
+              <li>
+                <span>Контакты</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        @include('partials/contacts-main.html')
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>

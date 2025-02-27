@@ -1,0 +1,22 @@
+.about-section {
+  margin-bottom: 40px;
+  @include mobile {
+    margin-bottom: 14px;
+  }
+  &__title {
+    margin-bottom: 14px;
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #1c202d;
+    @include mobile {
+      font-size: 14px;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}

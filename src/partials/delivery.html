@@ -1,0 +1,147 @@
+<section class="delivery">
+  <div class="container">
+    <h1 class="title2 delivery__title">Доставка товара</h1>
+
+    <div class="delivery__zones zones">
+      <p class="subtitle1 delivery__subtitle">Зоны доставки</p>
+      <div class="zones__items">
+        <div class="zones__map" id="map"></div>
+        <table class="zones__table">
+          <tr>
+            <th>Зона</th>
+            <th>Газель (1.5 т)</th>
+            <th>Газель (5 т)</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>от 800 ₽</td>
+            <td>от 25 000 ₽</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>от 1200 ₽</td>
+            <td>от 3000 ₽</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>от 1700 ₽</td>
+            <td>от 5000 ₽</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>от 3000 ₽</td>
+            <td>от 3000 ₽</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <section class="del-addr">
+      <address class="del-addr__address">
+        <h3 class="del-addr__title">Бор</h3>
+        <div class="del-addr__desc">
+          <p>
+            <b
+              >Стоимость доставки рассчитывается при оформлении заказа
+              сотрудником магазина.</b
+            >
+          </p>
+
+          <p><b>Итоговая стоимость зависит от:</b></p>
+
+          <ol>
+            <li>Зоны доставки (зоны установленные базой Строитель)</li>
+            <li>Веса, объема и длины товара в заказе.</li>
+          </ol>
+        </div>
+      </address>
+      <address class="del-addr__address">
+        <h3 class="del-addr__title">Нижний Новгород</h3>
+        <div class="del-addr__desc">
+          <p>
+            Доставка по Нижнему Новгороду от 1500 рублей (Газель до 1500 тонн)
+          </p>
+
+          <p>
+            Доставка в Нижний Новгород осуществляется 2 раза в неделю,
+            подробности уточняйте у менеджера
+          </p>
+        </div>
+      </address>
+    </section>
+
+    <section class="del-rules">
+      <h3 class="delivery__subtitle subtitle1 del-rules__title">
+        Правила доставки
+      </h3>
+      <div class="del-rules__items">
+        <div class="del-rules__item">
+          <p>
+            <b>Если вы размещаете заказ до 18:00,</b><br />
+            то доставка может быть осуществлена только на следующий день.
+          </p>
+        </div>
+        <div class="del-rules__item">
+          <p>
+            <b>Если вы размещаете заказ до 18:00,</b><br />
+            то доставка может быть осуществлена только на следующий день.
+          </p>
+        </div>
+        <div class="del-rules__item">
+          <p>
+            Заказав доставку вы можете выбрать удобный день доставки. Детали
+            доставки (адрес, время и стоимость) согласовываются с менеджером.
+          </p>
+          <p>
+            Доставка осуществляется после того, как Вы подтвердите готовность
+            получить товар и внесёте предоплату.
+          </p>
+          <p>
+            В день доставки просим оставаться на связи по указанному в заказе
+            номеру телефона.
+          </p>
+        </div>
+        <div class="del-rules__item">
+          <p>
+            Водитель-экспедитор не консультирует по вопросам технических
+            параметров и функциональных особенностей товаров, их совместимости,
+            стоимости и т.д.
+          </p>
+        </div>
+        <div class="del-rules__item">
+          <p>В услугу доставки не входит разгрузка, подъем и пронос товара.</p>
+          <p>
+            При получении товара внимательно осмотрите его внешний вид,
+            проверьте его количество согласно накладной. Расписываясь в товарной
+            накладной, вы подтверждаете отсутствие претензий к товару. В случае
+            отказа покупателя от подписания документов, подтверждающих получение
+            товара и выполнение доставки, передача товара не производится
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+<script src="https://api-maps.yandex.ru/v3/?apikey=221cbec3-01c0-4b1a-8417-d7d65e719c35&lang=ru_RU"></script>
+<script>
+  initMap();
+
+  async function initMap() {
+    await ymaps3.ready;
+
+    const { YMap, YMapDefaultSchemeLayer } = ymaps3;
+    const map = new YMap(
+      document.getElementById("map"),
+
+      {
+        location: {
+          center: [37.588144, 55.733842],
+
+          zoom: 15,
+        },
+      }
+    );
+
+    map.addChild(new YMapDefaultSchemeLayer());
+  }
+</script>

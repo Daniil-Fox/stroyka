@@ -1,0 +1,140 @@
+.delivery {
+  margin-bottom: 80px;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    margin-bottom: 24px;
+  }
+}
+
+.zones {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background: #5168c0;
+    border-radius: 30px;
+  }
+
+  &__map {
+    grid-column: 3 span;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    filter: saturate(0);
+  }
+  &__table {
+    overflow: hidden;
+    border-radius: 18px;
+    grid-column: 2 span;
+    padding: 10px;
+    background-color: #fff;
+    th,
+    td {
+      width: 33%;
+      background: #f6f8ff;
+      border-radius: 10px;
+      padding: 18px 24px;
+    }
+
+    th {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 16px;
+      color: #33499e;
+    }
+
+    td {
+      text-align: center;
+      font-weight: 500;
+      font-size: 16px;
+      color: #000;
+    }
+  }
+}
+
+.del-addr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px;
+  border-radius: 24px;
+  background: #eef3ff;
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  &__address {
+    font-style: normal;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 24px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 14px;
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: #000;
+  }
+  &__desc {
+    font-family: var(--second-family);
+
+    font-size: 16px;
+    line-height: 137%;
+    color: #000;
+
+    b {
+      font-weight: 600;
+    }
+    ol,
+    ul {
+      padding-left: 1rem;
+    }
+  }
+}
+
+.del-rules {
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #eef3ff;
+    border-radius: 24px;
+    padding: 10px;
+  }
+
+  &__item {
+    border-radius: 16px;
+    padding: 20px;
+    background-color: #fff;
+    width: calc(33% - 10px);
+    &:nth-child(5n + 1) {
+      width: calc(50% - 5px);
+    }
+    &:nth-child(5n + 2) {
+      width: calc(50% - 5px);
+    }
+
+    p {
+      margin: 0;
+      b {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.15;
+      }
+      &:not(:last-child) {
+        margin-bottom: 14px;
+      }
+    }
+  }
+}

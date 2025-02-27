@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <div class="container">
+          <div class="breadcrumbs">
+            <ul>
+              <li>
+                <a href="./">Главная</a>
+              </li>
+              <li>
+                <span>Акции</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        @include('partials/prom-hero.html')
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>

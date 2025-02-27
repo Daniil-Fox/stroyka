@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <div class="container">
+          <div class="breadcrumbs">
+            <ul>
+              <li>
+                <a href="./">Главная</a>
+              </li>
+              <li>
+                <span>Заказ успешно оформлен</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <section class="success">
+          <div class="container">
+            <div class="success__content">
+              <div class="success__check">
+                <svg
+                  width="60"
+                  height="60"
+                  viewBox="0 0 60 60"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.05"
+                    d="M0 30C0 5.295 5.295 0 30 0C54.705 0 60 5.295 60 30C60 54.705 54.705 60 30 60C5.295 60 0 54.705 0 30Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M0 30C0 5.295 5.295 0 30 0C54.705 0 60 5.295 60 30C60 54.705 54.705 60 30 60C5.295 60 0 54.705 0 30Z"
+                    fill="#44D14B"
+                  />
+                  <path
+                    d="M20 30L25.6093 35.6093C26.1933 36.1933 27.14 36.1933 27.724 35.6093L40 23.3333"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <p class="title2 success__title">
+                Ваш заказ #4242 успешно оформлен
+              </p>
+              <p class="success__desc">
+                Наш оператор свяжется с Вами в ближайшее время.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>

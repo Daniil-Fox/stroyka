@@ -1,0 +1,17 @@
+.promo {
+  margin-bottom: 80px;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
