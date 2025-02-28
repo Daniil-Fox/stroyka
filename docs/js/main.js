@@ -10650,6 +10650,9 @@ productsSliders.forEach(slider => {
     },
     breakpoints: {
       320: {
+        slidesPerView: 1
+      },
+      375: {
         slidesPerView: 2
       },
       600: {
@@ -10958,6 +10961,40 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+  const breadcrumbs = document.querySelector(".breadcrumbs ul");
+  const items = Array.from(breadcrumbs.children);
+  const ellipsis = document.createElement("li");
+  ellipsis.classList.add("ellipsis");
+  ellipsis.textContent = "...";
+  const adjustBreadcrumbs = () => {
+    const breadWidth = breadcrumbs.scrollWidth;
+    const totalItems = items.length;
+    let usedWidth = 0;
+
+    // Сброс состояния
+    items.forEach(item => item.classList.remove("hidden"));
+    ellipsis.remove();
+
+    // Вычисляем ширины
+    for (let i = 0; i < totalItems; i++) {
+      const item = items[i];
+      usedWidth += item.offsetWidth;
+
+      // Если ширина превышена, скрываем промежуточные элементы
+      if (breadWidth >= window.innerWidth) {
+        if (i > 1 && i < totalItems - 1) {
+          items.slice(1, totalItems - 1).forEach(midItem => {
+            midItem.classList.add("hidden");
+          });
+          breadcrumbs.insertBefore(ellipsis, items[totalItems - 1]);
+        }
+      }
+    }
+  };
+
+  // Вызываем функцию при загрузке и изменении размера окна
+  adjustBreadcrumbs();
+  // window.addEventListener("resize", adjustBreadcrumbs);
 });
 })();
 

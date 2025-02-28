@@ -1,8 +1,14 @@
 .single-prod {
   margin-bottom: 40px;
-
+  @include mobile {
+    margin-bottom: 24px;
+  }
   &__title {
     margin-bottom: 24px;
+    @include small-tablet {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
   }
 
   &__slider {
@@ -27,6 +33,11 @@
       background-color: #5168c0;
       color: #fff;
     }
+    @include small-tablet {
+      width: auto;
+      padding: 12px 24px;
+    }
+
     &.swiper-slide-thumb-active {
       background-color: #5168c0;
       color: #fff;
@@ -36,10 +47,20 @@
     min-width: 0;
     max-width: 100%;
   }
+  &__left {
+    display: flex;
+    gap: 40px;
+  }
   &__container {
     display: grid;
     grid-template-columns: repeat(13, 1fr);
     gap: 40px;
+
+    @media (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
   }
 
   &__content {
@@ -85,19 +106,30 @@
 }
 
 .single-sum {
-  display: flex;
-  gap: 40px;
-
   &__img {
     width: 435px;
     aspect-ratio: 1 / 1;
     flex-shrink: 0;
     background-color: #fff;
+    @include small-tablet {
+      display: none;
+      margin: 0 auto;
+    }
+    @include mobile {
+      width: 100%;
+    }
     img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: contain;
+    }
+
+    &--mob {
+      display: none;
+      @include small-tablet {
+        display: block;
+      }
     }
   }
 
@@ -165,10 +197,26 @@
     &:not(:last-child) {
       margin-bottom: 16px;
     }
+    @include small-tablet {
+      font-size: 16px;
+    }
   }
   &__cart {
     &:not(:last-child) {
       margin-bottom: 16px;
+    }
+
+    @include small-tablet {
+      display: flex;
+      gap: 10px;
+
+      .products-item__minus,
+      .products-item__plus {
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+    }
+    @media (max-width: 390px) {
+      flex-direction: column;
     }
   }
   &__total {
@@ -176,15 +224,25 @@
     align-items: center;
     justify-content: space-between;
 
-    span {
+    & > span {
       font-family: var(--font-family);
       font-weight: 500;
       font-size: 20px;
       line-height: 80%;
       color: #1c202d;
-      span {
+      & > span {
+        line-height: inherit;
         font-weight: 600;
         font-size: 16px;
+      }
+
+      @include small-tablet {
+        &:first-child {
+          font-size: 16px;
+        }
+        &:last-child {
+          font-size: 24px;
+        }
       }
     }
   }
@@ -193,6 +251,9 @@
     gap: 4px;
     &:not(:last-child) {
       margin-bottom: 10px;
+      @include small-tablet {
+        margin: 0;
+      }
     }
     button {
       width: 46px;
@@ -215,7 +276,13 @@
       font-weight: 600;
       font-size: 20px;
       color: #1c202d;
-
+      @include small-tablet {
+        font-size: 18px;
+      }
+      @include mobile {
+        width: 65px;
+        font-size: 16px;
+      }
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button {
         /* display: none; <- Crashes Chrome on hover */

@@ -21,6 +21,9 @@
     letter-spacing: -0.02em;
     color: #1c202d;
     margin-bottom: 20px;
+    @include mobile {
+      margin-bottom: 18px;
+    }
     &::before {
       content: counter(counter);
       display: flex;

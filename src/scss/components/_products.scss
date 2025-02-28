@@ -20,6 +20,15 @@
       }
     }
   }
+
+  &__title {
+    @include small-tablet {
+      font-size: 26px;
+    }
+    @include mobile {
+      font-size: 24px;
+    }
+  }
 }
 
 .products-item {
@@ -119,9 +128,13 @@
     height: 20px;
     background-color: #fff;
     border-radius: 8px;
-
+    flex-shrink: 0;
     cursor: pointer;
     transition: background-color 0.2s ease-in;
+    @include small-tablet {
+      width: 32px;
+      height: 32px;
+    }
     @include hover {
       background-color: #fde047;
     }
@@ -132,6 +145,7 @@
     justify-content: center;
     background: #e5ebff;
     border-radius: 14px;
+    gap: 0;
     padding: 12px 20px;
   }
 }

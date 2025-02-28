@@ -18,6 +18,9 @@ productsSliders.forEach((slider) => {
     },
     breakpoints: {
       320: {
+        slidesPerView: 1,
+      },
+      375: {
         slidesPerView: 2,
       },
       600: {

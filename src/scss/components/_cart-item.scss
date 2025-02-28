@@ -5,10 +5,20 @@
   border: 1px solid rgba(230, 230, 230, 0.5);
   border-radius: 16px;
   padding: 14px 24px;
+  position: relative;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-top: 54px;
+  }
   &__info {
     display: flex;
     align-items: center;
     gap: 24px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__img {
@@ -16,8 +26,12 @@
 
     aspect-ratio: 105 / 86;
     border-radius: 14px;
+    overflow: hidden;
     background-color: #fff;
-
+    @media (max-width: 768px) {
+      width: 120px;
+      aspect-ratio: 1 / 1;
+    }
     img {
       display: block;
       width: 100%;
@@ -52,6 +66,11 @@
     display: flex;
     align-items: center;
     gap: 24px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      justify-content: space-between;
+    }
   }
 
   &__price {
@@ -73,12 +92,22 @@
     color: #868ca4;
   }
 
+  &__col {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
   &__num {
     padding: 8px 14px;
     justify-content: center;
     gap: 0;
     input {
       width: 53px;
+    }
+
+    @media (max-width: 768px) {
+      flex: 0 0;
     }
   }
 
@@ -100,7 +129,11 @@
     width: 16px;
     height: 16px;
     flex-shrink: 0;
-
+    @media (max-width: 768px) {
+      position: absolute;
+      left: 14px;
+      top: 14px;
+    }
     svg {
       width: 100%;
       height: 100%;

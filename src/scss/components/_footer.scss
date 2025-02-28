@@ -198,6 +198,9 @@
         background: #f1f4ff;
         flex: 1;
       }
+      @media (max-width: 340px) {
+        font-size: 14px;
+      }
     }
   }
   &__address {
@@ -337,6 +340,7 @@
     @include small-tablet {
       flex-direction: column;
       gap: 10px;
+      text-align: center;
     }
 
     svg {

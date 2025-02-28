@@ -1,6 +1,11 @@
 .payment {
   margin-bottom: 80px;
-
+  @include small-tablet {
+    margin-bottom: 40px;
+  }
+  @include mobile {
+    margin-bottom: 24px;
+  }
   &__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -9,6 +14,11 @@
     background: #eef3ff;
     border-radius: 24px;
     padding: 10px;
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -21,6 +31,9 @@
     color: #000;
 
     margin-bottom: 40px;
+    @include small-tablet {
+      margin-bottom: 24px;
+    }
   }
 }
 

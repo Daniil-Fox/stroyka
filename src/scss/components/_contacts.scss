@@ -1,14 +1,25 @@
 .contacts {
   margin-bottom: 80px;
+  @include small-tablet {
+    margin-bottom: 40px;
+  }
+  @include mobile {
+    margin-bottom: 24px;
+  }
   &__title {
     margin-bottom: 40px;
+    @include small-tablet {
+      margin-bottom: 24px;
+    }
   }
   &__container {
     position: relative;
     padding: 14px;
     border-radius: 24px;
     overflow: hidden;
-
+    @include small-tablet {
+      min-height: 650px;
+    }
     &:not(:last-child) {
       margin-bottom: 40px;
     }
@@ -31,6 +42,10 @@
     border-radius: 16px;
 
     font-style: normal;
+
+    @include small-tablet {
+      max-width: 100%;
+    }
     &:not(:last-child) {
       margin-bottom: 8px;
     }
@@ -40,11 +55,17 @@
     position: absolute;
     right: 14px;
     bottom: 14px;
+
+    @include mobile {
+      left: 14px;
+    }
   }
 
   &__capture {
     margin: 0;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 18px;
 
     font-family: var(--second-family);
@@ -52,6 +73,27 @@
     font-size: 14px;
     line-height: 143%;
     color: #000;
+    &[data-dropdown-btn] {
+      @media (max-width: 800px) {
+        transition: margin-bottom 0.2s ease-in;
+        cursor: pointer;
+        margin-bottom: 0;
+      }
+    }
+    svg {
+      transition: 0.2s ease-in;
+      display: none;
+      @media (max-width: 800px) {
+        display: block;
+      }
+    }
+
+    &.active {
+      margin-bottom: 18px;
+      svg {
+        transform: rotateZ(180deg);
+      }
+    }
   }
   &__address {
     margin: 0;
@@ -64,6 +106,18 @@
   &__row {
     display: flex;
     gap: 60px;
+
+    @media (max-width: 800px) {
+      transition: max-height 0.2s ease-in;
+      will-change: max-height;
+      max-height: 0;
+      overflow: hidden;
+      gap: 30px;
+    }
+    @include mobile {
+      gap: 14px;
+      flex-direction: column;
+    }
   }
 
   &__tt {

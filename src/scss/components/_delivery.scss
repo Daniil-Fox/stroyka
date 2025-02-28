@@ -1,8 +1,16 @@
 .delivery {
   margin-bottom: 80px;
-
+  @include small-tablet {
+    margin-bottom: 40px;
+  }
+  @include mobile {
+    margin-bottom: 24px;
+  }
   &__title {
     margin-bottom: 40px;
+    @include small-tablet {
+      margin-bottom: 24px;
+    }
   }
 
   &__subtitle {
@@ -13,6 +21,9 @@
 .zones {
   &:not(:last-child) {
     margin-bottom: 40px;
+    @include small-tablet {
+      margin-bottom: 24px;
+    }
   }
   &__items {
     display: grid;
@@ -21,6 +32,11 @@
     padding: 10px;
     background: #5168c0;
     border-radius: 30px;
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__map {
@@ -29,6 +45,10 @@
     overflow: hidden;
     position: relative;
     filter: saturate(0);
+
+    @include small-tablet {
+      height: 324px;
+    }
   }
   &__table {
     overflow: hidden;
@@ -42,20 +62,30 @@
       background: #f6f8ff;
       border-radius: 10px;
       padding: 18px 24px;
-    }
-
-    th {
-      font-family: var(--font-family);
-      font-weight: 500;
-      font-size: 16px;
-      color: #33499e;
-    }
-
-    td {
       text-align: center;
       font-weight: 500;
       font-size: 16px;
       color: #000;
+      @media (max-width: 1250px) {
+        padding: 18px 10px;
+        &:nth-child(1) {
+          width: 20%;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 40%;
+        }
+      }
+      @include mobile {
+        font-size: 14px;
+      }
+      @media (max-width: 350px) {
+        font-size: 12px;
+      }
+    }
+
+    th {
+      color: #33499e;
     }
   }
 }
@@ -67,8 +97,15 @@
   padding: 10px;
   border-radius: 24px;
   background: #eef3ff;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
   &:not(:last-child) {
     margin-bottom: 40px;
+    @include small-tablet {
+      margin-bottom: 24px;
+    }
   }
   &__address {
     font-style: normal;
@@ -111,6 +148,11 @@
     background: #eef3ff;
     border-radius: 24px;
     padding: 10px;
+
+    @include small-tablet {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
   }
 
   &__item {
@@ -118,11 +160,20 @@
     padding: 20px;
     background-color: #fff;
     width: calc(33% - 10px);
+    @include small-tablet {
+      width: 100%;
+    }
     &:nth-child(5n + 1) {
       width: calc(50% - 5px);
+      @include small-tablet {
+        width: 100%;
+      }
     }
     &:nth-child(5n + 2) {
       width: calc(50% - 5px);
+      @include small-tablet {
+        width: 100%;
+      }
     }
 
     p {
@@ -131,6 +182,10 @@
         font-weight: 600;
         font-size: 18px;
         line-height: 1.15;
+        @include small-tablet {
+          margin-bottom: 4px;
+          font-size: 16px;
+        }
       }
       &:not(:last-child) {
         margin-bottom: 14px;

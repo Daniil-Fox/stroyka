@@ -199,7 +199,7 @@
     </div>
 
     <div class="header__mid header-mid">
-      <a href="#" class="header-mid__logo">
+      <a href="./" class="header-mid__logo">
         <img src="./img/logo.webp" alt="" />
       </a>
       <button
@@ -524,9 +524,25 @@
           Нижегородская область,<br />г. Бор, ул. Кольцова, 22М
         </p>
       </address>
-      <address class="contacts__block">
-        <p class="contacts__capture">Время работы</p>
-        <div class="contacts__row">
+      <address class="contacts__block" data-dropdown>
+        <p class="contacts__capture" data-dropdown-btn>
+          Время работы
+          <svg
+            width="14"
+            height="5"
+            viewBox="0 0 14 5"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1.03505 0.0291131C1.2329 0.0291131 1.43163 0.0735067 1.60662 0.170172L7.08483 3.14601L12.3933 0.140815C12.869 -0.116241 13.5101 -0.0116997 13.8258 0.375675C14.1432 0.761617 14.0148 1.28504 13.5391 1.54209L7.65815 4.85805C7.31257 5.04708 6.85972 5.04708 6.51239 4.85948L0.461733 1.57288C-0.0139832 1.31583 -0.143243 0.790972 0.173315 0.40503C0.373801 0.160147 0.70179 0.0291131 1.03505 0.0291131Z"
+              fill="#1C202D"
+            />
+          </svg>
+        </p>
+        <div class="contacts__row" data-dropdown-content>
           <div class="contacts__tt">
             <span>Понедельник — Суббота</span>
             <p>8:00-19:00</p>
