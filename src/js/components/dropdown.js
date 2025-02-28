@@ -1,7 +1,7 @@
 const dropdownItems = document.querySelectorAll("[data-dropdown]");
 
 if (
-  window.matchMedia("(max-width: 800px)").matches &&
+  window.matchMedia("(max-width: 900px)").matches &&
   dropdownItems.length > 0
 ) {
   dropdownItems.forEach((item) => {

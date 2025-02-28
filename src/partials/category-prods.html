@@ -21,35 +21,38 @@
             <a href="#">Фасадные панели</a>
           </li>
         </ul>
-        <div class="category-prods__sorting">
-          <span>Сортировать по:</span>
-          <div class="category-prods__dropdown dropdown">
-            <div class="dropdown__header">
-              <span>цене</span>
-              <svg
-                width="8"
-                height="4"
-                viewBox="0 0 8 4"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M0.804494 0.1789C0.910484 0.1789 1.01695 0.206646 1.11069 0.267062L4.04544 2.12696L6.88928 0.248715C7.14413 0.0880546 7.48754 0.153393 7.65665 0.395502C7.82671 0.636716 7.75793 0.963853 7.50309 1.12451L4.35258 3.19698C4.16745 3.31513 3.92485 3.31513 3.73878 3.19788L0.497357 1.14376C0.242509 0.983096 0.173263 0.655062 0.342847 0.413849C0.450251 0.260796 0.625959 0.1789 0.804494 0.1789Z"
-                  fill="#1C202D"
-                />
-              </svg>
-            </div>
-            <div class="dropdown__content">
-              <div class="dropdown__body">
-                <div class="dropdown__item">
-                  <a href="#">цене</a>
+        <div class="category-prods__row">
+          <div class="category-prods__sorting">
+            <span>Сортировать по:</span>
+            <div class="category-prods__dropdown dropdown">
+              <div class="dropdown__header">
+                <span>цене</span>
+                <svg
+                  width="8"
+                  height="4"
+                  viewBox="0 0 8 4"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.804494 0.1789C0.910484 0.1789 1.01695 0.206646 1.11069 0.267062L4.04544 2.12696L6.88928 0.248715C7.14413 0.0880546 7.48754 0.153393 7.65665 0.395502C7.82671 0.636716 7.75793 0.963853 7.50309 1.12451L4.35258 3.19698C4.16745 3.31513 3.92485 3.31513 3.73878 3.19788L0.497357 1.14376C0.242509 0.983096 0.173263 0.655062 0.342847 0.413849C0.450251 0.260796 0.625959 0.1789 0.804494 0.1789Z"
+                    fill="#1C202D"
+                  />
+                </svg>
+              </div>
+              <div class="dropdown__content">
+                <div class="dropdown__body">
+                  <div class="dropdown__item">
+                    <a href="#">цене</a>
+                  </div>
+                  <div class="dropdown__item"><a href="#">категории</a></div>
                 </div>
-                <div class="dropdown__item"><a href="#">категории</a></div>
               </div>
             </div>
           </div>
+          @include('./sidebar-mob.html')
         </div>
         <div class="category-prods__items">
           <div class="products__item products-item swiper-slide">

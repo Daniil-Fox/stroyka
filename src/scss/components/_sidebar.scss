@@ -1,9 +1,48 @@
 .sidebar {
   grid-column: 3 span;
+  @include tablet {
+    grid-column: 5 span;
+  }
+  @include small-tablet {
+    display: none;
+  }
+  &--mob {
+    display: none;
+    @include small-tablet {
+      display: block;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    padding: 15px;
+    background: #f0f4ff;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    cursor: pointer;
+
+    svg {
+      transition: 0.2s ease-in;
+    }
+
+    &.active {
+      svg {
+        transform: rotateZ(180deg);
+      }
+    }
+  }
   &__list {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    @include small-tablet {
+      transition: max-height 0.3s ease-in;
+      will-change: max-height;
+      max-height: 0;
+      overflow: hidden;
+    }
   }
   &__link {
     display: flex;

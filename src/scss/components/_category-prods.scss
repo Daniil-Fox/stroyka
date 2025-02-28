@@ -4,17 +4,29 @@
     display: grid;
     grid-template-columns: repeat(14, 1fr);
     gap: 40px;
+    @include small-tablet {
+      display: block;
+    }
   }
 
   &__content {
     grid-column: 11 span;
+    @include tablet {
+      grid-column: 9 span;
+    }
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
     &:not(:last-child) {
       margin-bottom: 40px;
     }
@@ -40,14 +52,22 @@
       }
     }
   }
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
 
+    @include small-tablet {
+      order: -2;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
   &__sorting {
     display: flex;
     align-items: center;
     gap: 18px;
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
 
     span {
       font-family: var(--second-family);

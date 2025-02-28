@@ -194,6 +194,17 @@
     display: flex;
     gap: 4px;
 
+    @include small-tablet {
+      justify-content: center;
+    }
+    @include mobile {
+      li {
+        &:first-child,
+        &:last-child {
+          flex: 1;
+        }
+      }
+    }
     a {
       display: block;
       font-family: var(--font-family);
@@ -204,11 +215,14 @@
       padding: 10px 16px;
       background-color: #eef3ff;
       transition: 0.2s ease-in;
+      text-align: center;
       @include hover {
         background-color: #33499e;
         color: #fff;
       }
-
+      @media (max-width: 340px) {
+        padding: 10px 13px;
+      }
       &.active {
         background-color: #33499e;
         color: #fff;
