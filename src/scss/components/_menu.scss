@@ -11,15 +11,18 @@
   transition: 0.3s ease-in;
   overflow-y: auto;
   max-height: 70vh;
+  box-shadow: none;
   &.menu--active {
     opacity: 1;
     transform: translateY(0);
   }
 
-  .footer__address {
-    max-width: 100%;
-    padding: 12px 0;
-    order: 5;
+  @media (max-width: 800px) {
+    .footer__address {
+      max-width: 100%;
+      padding: 12px 0;
+      order: 5;
+    }
   }
   .footer__col {
     padding: 0;
@@ -31,9 +34,11 @@
     }
   }
   .footer__capture {
-    padding: 10px 14px;
-    border-radius: 6px;
-    background: #e0e7ff;
+    @media (max-width: 800px) {
+      padding: 10px 14px;
+      border-radius: 6px;
+      background: #e0e7ff;
+    }
 
     &.active {
       margin-bottom: 4px;
@@ -49,9 +54,12 @@
     a {
       display: block;
       width: 100%;
-      padding: 10px 14px;
+      padding: 10px 0;
       background-color: #fff;
       border-radius: 6px;
+      @media (max-width: 800px) {
+        padding: 10px 14px;
+      }
     }
   }
 }

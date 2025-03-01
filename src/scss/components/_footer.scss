@@ -190,7 +190,10 @@
       font-size: 20px;
       line-height: 120%;
       color: #1c202d;
-
+      transition: 0.2s ease-in;
+      @include hover {
+        color: #dc002a;
+      }
       @media (max-width: 800px) {
         font-size: 16px;
         padding: 12px;
@@ -230,8 +233,14 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #33499e;
-
+    transition: 0.2s ease-in;
+    @include hover {
+      color: #dc002a;
+    }
     &--call {
+      svg {
+        fill: currentColor;
+      }
       @media (max-width: 800px) {
         width: 100%;
         border: 1px solid #33499e;
@@ -242,6 +251,9 @@
       }
     }
     &--email {
+      svg {
+        stroke: currentColor;
+      }
       @media (max-width: 800px) {
         border-radius: 8px;
         padding: 12px 16px;

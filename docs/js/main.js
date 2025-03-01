@@ -11038,6 +11038,32 @@ document.addEventListener("DOMContentLoaded", function () {
     adjustPagination();
     window.addEventListener("resize", adjustPagination);
   }
+  const header = document.querySelector("header");
+  const footer = document.querySelector("footer");
+  const element = document.querySelector(".cart-sign");
+  const observerOptions = {
+    root: null,
+    threshold: 0
+  };
+  const observerCallback = entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        element.style.opacity = "0";
+        setTimeout(() => {
+          element.style.display = "none";
+        }, 300);
+      } else {
+        element.style.display = "flex";
+        setTimeout(() => {
+          element.style.opacity = "1";
+        }, 10);
+      }
+    });
+  };
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  // observer.observe(header);
+  observer.observe(footer);
 });
 })();
 

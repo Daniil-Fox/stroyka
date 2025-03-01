@@ -38,6 +38,18 @@ a {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
   position: relative;
 
+  &.burger-open {
+    .main {
+      &::after {
+        opacity: 1;
+        z-index: 1;
+      }
+    }
+  }
+}
+.main {
+  flex: 1;
+  position: relative;
   &::after {
     content: "";
     position: absolute;
@@ -51,16 +63,6 @@ a {
     opacity: 0;
     transition: 0.3s ease-in;
   }
-
-  &.burger-open {
-    &::after {
-      opacity: 1;
-      z-index: 1;
-    }
-  }
-}
-.main {
-  flex: 1;
 }
 .is-hidden {
   display: none !important; /* stylelint-disable-line declaration-no-important */

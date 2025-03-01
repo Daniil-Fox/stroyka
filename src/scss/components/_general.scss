@@ -3,6 +3,11 @@
   font-weight: 500;
   font-size: 13px;
   color: #1c202d;
+  transition: 0.2s ease-in;
+
+  @include hover {
+    color: #dc002a;
+  }
 }
 
 .btn {
@@ -26,10 +31,26 @@
     font-weight: 600;
     font-size: 14px;
     color: #fff;
+    @include hover {
+      background-color: #d62444;
+    }
+    &:active {
+      position: relative;
+      top: 1px;
+      background-color: #c21b3a;
+    }
   }
 
   &--yellow {
     background-color: #fde047;
+    @include hover {
+      background-color: #ffe978;
+    }
+    &:active {
+      position: relative;
+      top: 1px;
+      background-color: #ffda20;
+    }
   }
 
   &--stroke {
@@ -40,6 +61,11 @@
     @include hover {
       background-color: #33499e;
       color: #fff;
+    }
+    &:active {
+      position: relative;
+      top: 1px;
+      background-color: #2a45b3;
     }
   }
 }
@@ -228,5 +254,120 @@
         color: #fff;
       }
     }
+  }
+}
+
+.cart-sign {
+  position: fixed;
+  z-index: 10;
+  right: 120px;
+  bottom: 100px;
+  aspect-ratio: 1 / 1;
+  width: 52px;
+  background: #fde047;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: opacity 0.3s ease-in;
+  animation: scale-up 1.2s ease-in-out 3;
+  @include small-tablet {
+    right: 40px;
+    bottom: 40px;
+    width: 50px;
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  span {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 17px;
+    aspect-ratio: 1 / 1;
+    background: #dc002a;
+    border-radius: 100%;
+
+    font-family: var(--second-family);
+    font-weight: 800;
+    font-size: 9px;
+    line-height: 111%;
+    letter-spacing: -0.08em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fde047;
+    border-radius: 50%;
+    opacity: 0;
+  }
+  &::before {
+    transform: scale(1.5);
+    animation: pulse1 1.2s ease-in-out 3;
+  }
+  &::after {
+    transform: scale(2);
+    animation: pulse2 1.2s ease-in-out 3;
+  }
+}
+
+@keyframes pulse1 {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  1% {
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes pulse2 {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  1% {
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(2.5);
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }

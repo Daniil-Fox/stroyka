@@ -68,6 +68,7 @@
       display: block;
       width: 16px;
       height: 16px;
+      stroke: currentColor;
     }
 
     span {
@@ -90,6 +91,7 @@
       display: block;
       width: 12px;
       height: 12px;
+      fill: currentColor;
     }
     span {
       @include tablet {
@@ -167,7 +169,15 @@
     color: #fff;
 
     margin-right: 10px;
-
+    transition: 0.2s ease-in;
+    @include hover {
+      background-color: #d62444;
+    }
+    &:active {
+      position: relative;
+      top: 1px;
+      background-color: #c21b3a;
+    }
     @include small-tablet {
       margin-right: 0;
       flex: 1;
@@ -248,7 +258,10 @@
       font-size: 18px;
       line-height: 133%;
       color: #1c202d;
-
+      transition: 0.2s ease-in;
+      @include hover {
+        color: #dc002a;
+      }
       @include tablet {
         font-size: 16px;
       }
@@ -264,7 +277,7 @@
 
   &__cart {
     position: relative;
-    height: 100%;
+    aspect-ratio: 1 / 1;
     width: 52px;
     background: #fde047;
     border-radius: 12px;

@@ -10,6 +10,27 @@
       font-weight: 400;
       font-size: 13px;
       color: #1c202d;
+      display: inline-block;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 10%;
+        opacity: 0;
+        transition: 0.3s ease-in;
+        height: 1px;
+        background-color: currentColor;
+      }
+
+      @include hover {
+        &::after {
+          width: 100%;
+          opacity: 1;
+        }
+      }
     }
   }
 }
