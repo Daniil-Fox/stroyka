@@ -28,7 +28,9 @@
     position: absolute;
     inset: 0;
 
-    filter: saturate(0.1);
+    [class*="ground-pane"] {
+      filter: saturate(0.1);
+    }
   }
 
   &__block {

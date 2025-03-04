@@ -3527,6 +3527,8 @@ a {
 .contacts__map {
   position: absolute;
   inset: 0;
+}
+.contacts__map [class*=ground-pane] {
   -webkit-filter: saturate(0.1);
   filter: saturate(0.1);
 }
