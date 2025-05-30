@@ -36,6 +36,27 @@ productsSliders.forEach((slider) => {
   });
 });
 
+const galleryContainers = document.querySelectorAll(".single-prod__images");
+galleryContainers.forEach((container) => {
+  const gallery = container.querySelector(".single-prod__gallery");
+  const galleryThumbs = container.querySelector(".single-prod__thumbs");
+  const galleryThumbsSlider = new Swiper(galleryThumbs, {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    navigation: {
+      prevEl: container.querySelector(".single-prod__arr--prev"),
+      nextEl: container.querySelector(".single-prod__arr--next"),
+    },
+  });
+  const gallerySlider = new Swiper(gallery, {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    thumbs: {
+      swiper: galleryThumbsSlider,
+    },
+  });
+});
+
 const tabs = new Swiper(".single-prod__slider", {
   slidesPerView: "auto",
   spaceBetween: 6,

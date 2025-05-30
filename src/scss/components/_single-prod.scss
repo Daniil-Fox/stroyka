@@ -47,9 +47,93 @@
     min-width: 0;
     max-width: 100%;
   }
+  &__images {
+    max-width: 45%;
+    width: 100%;
+    flex-shrink: 0;
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    @include small-tablet {
+      display: none;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    &--mob {
+      display: none;
+      @include small-tablet {
+        display: block;
+      }
+    }
+  }
+
+  &__thumbs-wrapper {
+    position: relative;
+    padding: 0 24px;
+    margin-top: 10px;
+  }
+
+  &__buttons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+  }
+  &__arr {
+    color: #1c202d;
+    cursor: pointer;
+    svg {
+      fill: currentColor;
+    }
+
+    &--next {
+      transform: rotate(180deg);
+    }
+
+    &.swiper-button-disabled {
+      color: #98a3cc;
+      pointer-events: none;
+    }
+  }
+
+  &__gallery {
+    border: 1px solid #eef3ff;
+  }
   &__left {
     display: flex;
     gap: 40px;
+  }
+
+  &__thumbs {
+    border: none;
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      aspect-ratio: 1 / 1;
+      border: 1px solid #eef3ff;
+      cursor: pointer;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
   }
   &__container {
     display: grid;
@@ -106,13 +190,16 @@
 }
 
 .single-sum {
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
   &__img {
-    width: 435px;
+    width: 100%;
     aspect-ratio: 1 / 1;
     flex-shrink: 0;
     background-color: #fff;
     @include small-tablet {
-      display: none;
       margin: 0 auto;
     }
     @include mobile {
@@ -123,13 +210,6 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-    }
-
-    &--mob {
-      display: none;
-      @include small-tablet {
-        display: block;
-      }
     }
   }
 
@@ -173,6 +253,26 @@
 
     p {
       margin: 0;
+    }
+  }
+
+  &__btn {
+    flex-grow: 1;
+    max-width: 100%;
+    &--pin {
+      max-width: 66px;
+      flex-shrink: 0;
+
+      position: relative;
+
+      span {
+        position: absolute;
+        right: 20px;
+        bottom: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #1c202d;
+      }
     }
   }
 }

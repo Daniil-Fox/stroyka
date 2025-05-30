@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="container">
+        <button class="btn-reset btn btn--red" data-filter-trigger>Открыть фильтр</button>
+        <div class="filter">
+          <div class="filter__wrapper">
+            <div class="filter__top">
+              <button class="filter__back btn-reset" data-filter-close>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.5">
+                    <path d="M19 12H5" stroke="#1C202D" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M12 19L5 12L12 5" stroke="#1C202D" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                </svg>
+              </button>
+
+              <h2 class="filter__title">Фильтр товаров</h2>
+
+              <button class="filter__close btn-reset" data-filter-close>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.5">
+                    <path d="M18 6L6 18" stroke="#1C202D" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M6 6L18 18" stroke="#1C202D" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                </svg>
+              </button>
+            </div>
+
+            <div class="filter__group">
+              <div class="filter__header">
+                <span class="filter__group-title">Цена, ₽</span>
+                <button class="filter__toggle"></button>
+              </div>
+              <div class="filter__price">
+                <div class="filter__row">
+                  <input type="number" class="filter__price-input" placeholder="от 200">
+                  <input type="number" class="filter__price-input" placeholder="до 124 836">
+                </div>
+                <div class="filter__range-slider"></div>
+              </div>
+            </div>
+
+            <div class="filter__group">
+              <div class="filter__header">
+                <span class="filter__group-title">Наличие</span>
+                <button class="filter__toggle"></button>
+              </div>
+              <div class="filter__options">
+                <label class="filter__option">
+                  <input type="checkbox" class="filter__checkbox">
+                  <span class="filter__checkbox-custom"></span>
+                  <span class="filter__option-text">В наличии</span>
+                  <span class="filter__count">15</span>
+                </label>
+                <label class="filter__option">
+                  <input type="checkbox" class="filter__checkbox">
+                  <span class="filter__checkbox-custom"></span>
+                  <span class="filter__option-text">Нет в наличии</span>
+                  <span class="filter__count">3</span>
+                </label>
+                <label class="filter__option">
+                  <input type="checkbox" class="filter__checkbox">
+                  <span class="filter__checkbox-custom"></span>
+                  <span class="filter__option-text">Предзаказ</span>
+                </label>
+                <label class="filter__option">
+                  <input type="checkbox" class="filter__checkbox">
+                  <span class="filter__checkbox-custom"></span>
+                  <span class="filter__option-text">Ожидание 2-3 дня</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="filter__group">
+              <div class="filter__header">
+                <span class="filter__group-title">Характеристики</span>
+              </div>
+            </div>
+            <div class="filter__group filter__group--sub">
+              <div class="filter__header">
+                <span class="filter__group-title">Диаметр</span>
+                <button class="filter__toggle"></button>
+              </div>
+              <div class="filter__options">
+                <label class="filter__option">
+                  <input type="checkbox" class="filter__checkbox">
+                  <span class="filter__checkbox-custom"></span>
+                  <span class="filter__option-text">50 мм</span>
+                  <span class="filter__count">15</span>
+                </label>
+                <label class="filter__option">
+                  <input type="checkbox" class="filter__checkbox">
+                  <span class="filter__checkbox-custom"></span>
+                  <span class="filter__option-text">57 мм</span>
+                  <span class="filter__count">3</span>
+                </label>
+                <label class="filter__option">
+                  <input type="checkbox" class="filter__checkbox">
+                  <span class="filter__checkbox-custom"></span>
+                  <span class="filter__option-text">76 мм</span>
+                  <span class="filter__count">7</span>
+                </label>
+              </div>
+            </div>
+            <div class="filter__group filter__group--sub">
+              <div class="filter__header">
+                <span class="filter__group-title">Материал</span>
+                <button class="filter__toggle"></button>
+              </div>
+              <div class="filter__options">
+                <label class="filter__option">
+                  <input type="checkbox" class="filter__checkbox">
+                  <span class="filter__checkbox-custom"></span>
+                  <span class="filter__option-text">50 мм</span>
+                  <span class="filter__count">15</span>
+                </label>
+                <label class="filter__option">
+                  <input type="checkbox" class="filter__checkbox">
+                  <span class="filter__checkbox-custom"></span>
+                  <span class="filter__option-text">57 мм</span>
+                  <span class="filter__count">3</span>
+                </label>
+                <label class="filter__option">
+                  <input type="checkbox" class="filter__checkbox">
+                  <span class="filter__checkbox-custom"></span>
+                  <span class="filter__option-text">76 мм</span>
+                  <span class="filter__count">7</span>
+                </label>
+              </div>
+            </div>
+            <div class="filter__group filter__group--sub">
+              <div class="filter__header">
+                <span class="filter__group-title">Область применения</span>
+                <button class="filter__toggle"></button>
+              </div>
+              <div class="filter__options">
+                <label class="filter__option">
+                  <input type="checkbox" class="filter__checkbox">
+                  <span class="filter__checkbox-custom"></span>
+                  <span class="filter__option-text">50 мм</span>
+                  <span class="filter__count">15</span>
+                </label>
+                <label class="filter__option">
+                  <input type="checkbox" class="filter__checkbox">
+                  <span class="filter__checkbox-custom"></span>
+                  <span class="filter__option-text">57 мм</span>
+                  <span class="filter__count">3</span>
+                </label>
+                <label class="filter__option">
+                  <input type="checkbox" class="filter__checkbox">
+                  <span class="filter__checkbox-custom"></span>
+                  <span class="filter__option-text">76 мм</span>
+                  <span class="filter__count">7</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="filter__actions">
+              <button class="filter__apply">Применить</button>
+              <button class="filter__reset">
+                <span class="filter__reset-icon">
+                  <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.5">
+                      <path d="M14 4.5L5 13.5" stroke="#1C202D" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M5 4.5L14 13.5" stroke="#1C202D" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </g>
+                  </svg>
+                </span>
+                Сбросить всё
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

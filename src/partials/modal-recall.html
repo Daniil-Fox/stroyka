@@ -1,0 +1,33 @@
+<div class="modal " id="modal-recall">
+  <div class="modal__body">
+    <div class="modal__header">
+      <p звонок class="modal__title subtitle1">Обратный звонок</p>
+      <button class="btn-reset modal__close">
+        <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 7.5L7 21.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M7 7.5L21 21.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+    <form action="#" class="modal__form form">
+      <div class="form__grid">
+        <label class="form__label">
+          <input type="text" name="Имя" placeholder="Ваше имя" class="form__input" />
+        </label>
+        <label class="form__label">
+          <input type="tel" name="Телефон" placeholder="Ваш телефон" class="form__input" />
+        </label>
+        <textarea name="Примечание" placeholder="Примечание" class="form__input form__area" id=""></textarea>
+      </div>
+      <div class="modal__buttons">
+
+        <button class="btn-reset btn btn--light modal__btn modal-cancel">
+          <span class="btn__text">Отмена</span>
+        </button>
+        <button type="submit" class="btn-reset btn btn--primary form__btn modal__btn">
+          <span class="btn__text">Заказать звонок</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -68,6 +68,15 @@
       background-color: #2a45b3;
     }
   }
+
+  &--light {
+    background-color: #f1f4ff;
+    color: #1c202d;
+
+    @include hover {
+      background-color: #c1cbe0;
+    }
+  }
 }
 
 .title2 {
