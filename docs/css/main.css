@@ -5384,4 +5384,21 @@ a {
   content: "";
   position: absolute;
   inset: 0;
+}
+.sidebar-profile__nav ul li.logout {
+  background-color: transparent;
+  border: 1px solid #dce3fb;
+  color: #98a3cc;
+  -webkit-transition: color 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  transition: color 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  transition: color 0.3s ease-in, transform 0.3s ease-in;
+  transition: color 0.3s ease-in, transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+@media (any-hover: hover) {
+  .sidebar-profile__nav ul li.logout:hover {
+    -webkit-transform: translateX(4px);
+    -ms-transform: translateX(4px);
+    transform: translateX(4px);
+    color: #1c202d;
+  }
 }/*# sourceMappingURL=main.css.map */
