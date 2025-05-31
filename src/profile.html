@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="container">
+        <div class="breadcrumbs">
+          <ul>
+            <li>
+              <a href="./">Главная</a>
+            </li>
+            <li>
+              <span>Заказ успешно оформлен</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <section class="profile">
+        <div class="container">
+          <h1 class="title2 profile__title">Личный кабинет</h1>
+          <div class="profile__container">
+            <div class="profile__sidebar sidebar-profile">
+              <div class="sidebar-profile__header">
+                <div class="sidebar-profile__ava">
+                  <img src="./img/profile.webp" alt="Аватарка">
+                </div>
+                <div class="sidebar-profile__info">
+                  <div class="sidebar-profile__title">Привет, Даниил!</div>
+                  <a href="#" class="sidebar-profile__set">Настроить профиль</a>
+                </div>
+              </div>
+              <nav class="sidebar-profile__nav">
+                <ul>
+                  <li>
+                    <a href="./">Главная</a>
+                  </li>
+                  <li>
+                    <a href="./">Профиль</a>
+                  </li>
+                  <li>
+                    <a href="./">Заказы</a>
+                  </li>
+                  <li>
+                    <a href="./">Избранное</a>
+                  </li>
+                  <li>
+                    <a href="./">Уведомления</a>
+                  </li>
+                  <li>
+                    <a href="./">Мои отзывы</a>
+                  </li>
+                  <li class="logout">
+                    <a href="./">Выйти</a>
+                  </li>
+                </ul>
+              </nav>
+
+            </div>
+
+            <div class="profile__content">
+              <div class="profile__row">
+                <a href="#" class="profile__btn">
+                  Заказы
+
+                  <span>
+                    <img src="./img/burger.svg" alt="">
+                  </span>
+                </a>
+                <a href="#" class="profile__btn">
+                  Избранное
+
+                  <span>
+                    <img src="./img/fav.svg" alt="">
+                  </span>
+                </a>
+                <a href="#" class="profile__btn">
+                  Обращения
+
+                  <span>
+                    <img src="./img/comment.svg" alt="">
+                  </span>
+                </a>
+                <a href="#" class="profile__btn">
+                  Каталог
+
+                  <span>
+                    <img src="./img/catalog.svg" alt="">
+                  </span>
+                </a>
+              </div>
+              <a href="#" class="profile__help help profile__btn">
+                <span class="help__title">Нужна помощь?</span>
+                <span class="help__desc">Задайте вопрос</span>
+              </a>
+
+              <ul class="list-reset profile__list">
+                <li>
+                  <a href="#">Как вернуть и обменять товар</a>
+                </li>
+                <li>
+                  <a href="#">Условия доставки и сборки</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
